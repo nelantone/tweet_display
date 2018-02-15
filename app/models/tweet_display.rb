@@ -1,0 +1,2 @@
+class TweetDisplay < ApplicationRecord
+end
