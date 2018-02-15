@@ -1,8 +1,5 @@
 class CreateTweetDisplays < ActiveRecord::Migration[5.1]
   def change
-    create_table :tweet_displays do |t|
-
-      t.timestamps
-    end
+    create_table :tweet_displays, &:timestamps
   end
 end
