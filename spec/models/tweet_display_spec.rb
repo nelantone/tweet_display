@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe TweetDisplay, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'given #twitter well configured account with permissions' do
+    it 'has #twitter' do
+      expect(TweetDisplay.twitter).to eq('')
+    end
+
+  end
 end
