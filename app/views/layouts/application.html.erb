@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <div class="form-container">
+      <%= form_tag( tweet_displays_send_q_path , class: 'search-form') do %>
+        <%= search_field_tag :q, nil, { id: 'search-input', placeholder: 'Search for...' } %>
+        <%= button_tag(type: "submit", class: "btn btn-secondary") do %>
+          <id = 'search-button'>Go!</i></id>
+        <% end %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

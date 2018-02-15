@@ -7,4 +7,13 @@ class TweetDisplay < ApplicationRecord
       config.access_token_secret = ENV['ACCESS_SECRET']
     end
   end
+
+  def search(search_term)
+    where("name ilike ?", "%#{search_term}%")
+  end
+
+
+  def self.order_last_before(params)
+    find(params[:id]).comments.order("created_at DESC")
+  end
 end
