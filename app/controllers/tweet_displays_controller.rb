@@ -9,6 +9,6 @@ class TweetDisplaysController < ApplicationController
   end
 
   def send_q
-    @result = TweetDisplay.twitter.search(params[:q])
+    @results = TweetDisplay.twitter.search(params[:q])
   end
 end
