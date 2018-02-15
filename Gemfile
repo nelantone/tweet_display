@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# gem from the Twitter REST API
+gem 'twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
@@ -33,12 +34,25 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :test do
+  # test coverage gem
+  gem 'simplecov', require: false
+end
+
 group :development, :test do
+  # hide sensitive data with dotenv
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # debugger
+  gem 'pry-byebug'
+  # RSpec for rails
+  gem 'rspec-rails', '~> 3.7'
+  # checking ruby syntax
+  gem 'rubocop', require: false
 end
 
 group :development do
